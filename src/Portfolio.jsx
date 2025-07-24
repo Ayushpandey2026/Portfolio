@@ -61,7 +61,7 @@ export default function Portfolio() {
       {/* Header */}
       <div className="flex justify-between items-center p-6 relative z-20">
         <a
-          href="https://drive.google.com/file/d/1xSxeIle_FEPNQ7VBFwyz4Fi6xD2y_sKp/view?usp=sharing"
+      href="https://drive.google.com/uc?export=download&id=1xSxeIle_FEPNQ7VBFwyz4Fi6xD2y_sKp"
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded text-white hover:scale-105 transition"
@@ -149,7 +149,7 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
     </p>
     <div className="flex gap-4">
       <a
-        href="https://drive.google.com/file/d/1xSxeIle_FEPNQ7VBFwyz4Fi6xD2y_sKp/view?usp=sharing "
+        href="https://drive.google.com/uc?export=download&id=1xSxeIle_FEPNQ7VBFwyz4Fi6xD2y_sKp"
         download
         className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded text-white hover:scale-105 transition"
       >
