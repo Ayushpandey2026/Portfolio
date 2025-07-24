@@ -132,7 +132,7 @@ export default function Portfolio() {
       <Typewriter
         words={[
           "I build fast, modern & responsive web apps.",
-          "React | Next.js | TypeScript",
+          "React | Next.js | TypeScript | Node.js",
           "250+ DSA on LeetCode",
         ]}
         loop
@@ -144,9 +144,8 @@ export default function Portfolio() {
       />
     </p>
     <p className="mb-6 text-gray-300">
-      I’m Ayush, a passionate frontend dev who loves building stunning
-      websites with modern frameworks. Clean code, smooth UI, and perfect
-      responsiveness is my motto.
+      I’m Ayush — a passionate full stack developer who builds stunning, responsive, and scalable web apps using modern frameworks like React, Next.js, and Node.js.
+From pixel-perfect UI to efficient backend logic, I aim for clean code and great user experience.
     </p>
     <div className="flex gap-4">
       <a
