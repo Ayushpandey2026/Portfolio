@@ -149,7 +149,7 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
     </p>
     <div className="flex gap-4">
       <a
-        href="/AyushPandey_Resume.pdf"
+        href="https://drive.google.com/uc?export=download&id=13Q5u8AZp923J3qMzIIhVYuM9QRMMpwo-"
         download
         className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded text-white hover:scale-105 transition"
       >
