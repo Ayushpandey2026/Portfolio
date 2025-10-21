@@ -4,6 +4,9 @@ import { Typewriter } from "react-simple-typewriter";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
+const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+const emailAddress = import.meta.env.VITE_EMAIL;
+
 import {
   FaGithub,
   FaLinkedin,
@@ -20,6 +23,9 @@ import {
   FaJs,
   FaGit,
   FaLock,
+  FaGraduationCap,
+  FaCertificate,
+  FaTrophy,
 } from "react-icons/fa";
 
 import {
@@ -86,7 +92,7 @@ export default function Portfolio() {
   {/* Social icons in corner */}
   <div className="absolute top-8 right-8 flex flex-col gap-4">
     <a
-      href="mailto:ayushpandey02003@gmail.com"
+      href={`mailto:${emailAddress}`}
       className="text-2xl hover:scale-110 transition"
     >
       <FaEnvelope />
@@ -112,7 +118,7 @@ export default function Portfolio() {
   {/* Left: Photo */}
   <div className="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-indigo-500 mb-6 md:mb-0 md:mr-12">
     <img
-      src="images/Ayushphoto.jpg" 
+      src={import.meta.env.VITE_PHOTO_PATH}
       alt="Ayush Pandey"
       className="w-full h-full object-cover"
     />
@@ -132,8 +138,8 @@ export default function Portfolio() {
       <Typewriter
         words={[
           "I build fast, modern & responsive web apps.",
-          "React | Next.js | TypeScript | Node.js",
-          "250+ DSA on LeetCode",
+          "React | JavaScript | Node.js",
+          "350+ DSA on LeetCode",
         ]}
         loop
         cursor
@@ -144,7 +150,7 @@ export default function Portfolio() {
       />
     </p>
     <p className="mb-6 text-gray-300">
-      I’m Ayush — a passionate full stack developer who builds stunning, responsive, and scalable web apps using modern frameworks like React, Next.js, and Node.js.
+      I’m Ayush — a passionate Full Stack Developer who builds stunning, responsive, and scalable web apps using modern frameworks like React, Next.js, and Node.js.
 From pixel-perfect UI to efficient backend logic, I aim for clean code and great user experience.
     </p>
     <div className="flex gap-4">
@@ -156,7 +162,9 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
         Download Resume
       </a>
       <a
-        href="#contact"
+        href={`https://wa.me/${whatsappNumber}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="px-6 py-3 border border-indigo-500 text-indigo-500 rounded hover:bg-indigo-500 hover:text-white transition"
       >
         Hire Me
@@ -202,6 +210,117 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
         </div>
       </motion.section>
 
+      {/* ACADEMIC BACKGROUND */}
+      <motion.section
+        className="max-w-6xl mx-auto p-8 relative z-10"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-3xl font-bold mb-8 text-center">Academic Background</h2>
+
+        {/* Education Timeline */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <FaGraduationCap className="text-indigo-400" /> Education
+          </h3>
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+            {/* Timeline Items */}
+            {[
+              { year: "2026", degree: "Bachelor of Technology", institution: "United College of Engineering and Research", duration: "Nov 2022 – May 2026" },
+              { year: "2022", degree: "Senior Secondary (XII), CBSE", institution: "Tribhuvan Devi Academy", duration: "July 2022" },
+              { year: "2020", degree: "Secondary (X), CBSE", institution: "Tribhuvan Devi Academy", duration: "July 2020" },
+            ].map((edu, i) => (
+              <motion.div
+                key={i}
+                className="flex items-start mb-8"
+                whileInView={{ x: [50, 0], opacity: [0, 1] }}
+                transition={{ delay: i * 0.2 }}
+              >
+                <div className="flex-shrink-0 w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  {edu.year}
+                </div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                  <h4 className="text-xl font-bold mb-2">{edu.degree}</h4>
+                  <p className="text-indigo-400 mb-1">{edu.institution}</p>
+                  <p className="text-gray-300">{edu.duration}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Certifications Timeline */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <FaCertificate className="text-indigo-400" /> Certifications
+          </h3>
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+            {/* Timeline Items */}
+            {[
+              { year: "2025", title: "Adobe India Hackathon", desc: "Participated as part of Team Shaurya from United College of Engineering and Research, Allahabad.", link: "#" },
+              { year: "2024", title: "FLIPKART GRID 6.0 – Software Development Track", desc: "Participated in a national-level tech challenge by Flipkart.", link: "#" },
+              { year: "2024", title: "Prod-E-G Hackathon", desc: "Participated in a national-level hackathon.", link: "#" },
+              { year: "2024", title: "Microsoft Responsible Generative AI", desc: "Completed training on responsible AI use and ethics.", link: "#" },
+              { year: "2024", title: "Cybersecurity Internship – Edunet Foundation", desc: "Gained hands-on experience with threat detection and network security.", link: "#" },
+            ].map((cert, i) => (
+              <motion.div
+                key={i}
+                className="flex items-start mb-8"
+                whileInView={{ x: [50, 0], opacity: [0, 1] }}
+                transition={{ delay: i * 0.2 }}
+              >
+                <div className="flex-shrink-0 w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  {cert.year}
+                </div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                  <h4 className="text-xl font-bold mb-2">{cert.title}</h4>
+                  <p className="text-gray-300 mb-2">{cert.desc}</p>
+                  {cert.link !== "#" && (
+                    <a href={cert.link} target="_blank" rel="noreferrer" className="text-indigo-400 underline">
+                      View Certificate
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Hackathons & Open Source */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <FaTrophy className="text-indigo-400" /> Hackathons & Open Source
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { title: "Adobe India Hackathon", desc: "Team Shaurya, United College of Engineering and Research", link: "#" },
+              { title: "FLIPKART GRID 6.0", desc: "Software Development Track", link: "#" },
+              { title: "Prod-E-G Hackathon", desc: "National-level hackathon", link: "#" },
+            ].map((hack, i) => (
+              <motion.div
+                key={i}
+                className="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition"
+                whileInView={{ y: [50, 0], opacity: [0, 1] }}
+                transition={{ delay: i * 0.2 }}
+              >
+                <h4 className="text-xl font-bold mb-2">{hack.title}</h4>
+                <p className="text-gray-300 mb-4">{hack.desc}</p>
+                {hack.link !== "#" && (
+                  <a href={hack.link} target="_blank" rel="noreferrer" className="text-indigo-400 underline">
+                    Learn More
+                  </a>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
       {/* PROJECTS */}
       <motion.section
         className="max-w-5xl mx-auto p-8 relative z-10"
@@ -227,12 +346,14 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
               github: "https://github.com/Ayushpandey2026/CountryExplorer",
               live: "https://earthlyencounters.netlify.app/",
             },
-            // {
-            //   title: "REST API Server",
-            //   desc: "Secure Node.js REST API, CRUD operations, JWT, Render deploy, tested on Postman.",
-            //   img: "https://via.placeholder.com/400x250",
-            //   github: "https://github.com/Ayushpandey2026/RestApiServer",
-            // },
+            {
+title: "Wellness Session Platform",
+desc: "Built a secure wellness platform with JWT Auth, Protected Routes, session browsing, and draft publishing features. Implemented auto-save for drafts with debounced updates, improving reliability and preventing content loss.",
+img: "https://img.freepik.com/free-photo/wellness-diet-plan-healthy-living-icon_53876-121317.jpg?semt=ais_hybrid&w=740&q=80",
+github: "https://github.com/Ayushpandey2026/Wellness_Session_Platform",
+live: "https://wellness-session-platform-eta.vercel.app/login"
+},
+
             {
               title: "Dynamic JSON Schema Builder",
               desc: "Dynamic JSON Schema Builder is an advanced, interactive React application that enables users to visually create complex JSON schemas with nested fields in real-time. The project demonstrates my strong skills in ReactJS, Ant Design, React Hook Form, and modern development tools like Vite.",
@@ -279,8 +400,25 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+        <p className="mb-6 text-gray-300">Let's connect! Reach out via email or WhatsApp for collaborations, opportunities, or just to say hi.</p>
+        <div className="flex justify-center gap-6 mb-8">
+          <a
+            href={`mailto:${emailAddress}`}
+            className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+          >
+            <FaEnvelope /> Email
+          </a>
+          <a
+            href={`https://wa.me/${whatsappNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+          >
+            <FaExternalLinkAlt /> WhatsApp
+          </a>
+        </div>
         <form
-          action="https://formsubmit.co/ayushpandey02003@gmail.com"
+          action={`https://formsubmit.co/${emailAddress}`}
           method="POST"
           className="flex flex-col gap-4"
         >
@@ -323,7 +461,7 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
       >
         <h2 className="text-3xl font-bold mb-4">Coding Profiles</h2>
         <p className="flex justify-center items-center gap-2">
-          <FaCode className="text-xl" /> 250+ LeetCode DSA:{" "}
+          <FaCode className="text-xl" /> 350+ LeetCode DSA:{" "}
           <a
             href="https://leetcode.com/u/Ayushpandey23/"
             target="_blank"
