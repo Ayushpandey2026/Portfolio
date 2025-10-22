@@ -8,7 +8,7 @@ This is my personal portfolio built with **React.js**, **Tailwind CSS**, **Frame
 
 ## 📌 Live Demo
 
-🔗 https://ayush21portfolio.netlify.app/
+🔗 [https://ayushpp.netlify.app/](https://ayushpp.netlify.app/)
 
 ---
 
