@@ -262,6 +262,8 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
             {/* Timeline Items */}
             {[
+              { year: "2025", title: "Oracle Certified Generative AI Professional", desc: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional.", link: "#" },
+              { year: "2025", title: "Oracle  Certified AI Foundations Associate", desc: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate.", link: "#" },
               { year: "2025", title: "Adobe India Hackathon", desc: "Participated as part of Team Shaurya from United College of Engineering and Research, Allahabad.", link: "#" },
               { year: "2024", title: "FLIPKART GRID 6.0 – Software Development Track", desc: "Participated in a national-level tech challenge by Flipkart.", link: "#" },
               { year: "2024", title: "Prod-E-G Hackathon", desc: "Participated in a national-level hackathon.", link: "#" },
@@ -332,6 +334,14 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
 
         <div className="grid md:grid-cols-2 gap-8">
           {[
+            {
+              title: "JobWallah",
+              desc: "A modern job portal built to simplify the hiring process by connecting talent with opportunities. The platform enables quick job discovery, easy applications, and efficient recruitment management for employers.It includes features such as job posting, job search, application management, and user authentication, providing an efficient recruitment workflow.",
+              img: "https://static.vecteezy.com/system/resources/previews/010/821/730/original/search-job-find-vacancy-employment-go-to-career-people-seek-opportunity-for-vacancy-or-work-position-search-new-work-in-internet-illustration-vector.jpg",
+              github: "https://github.com/Ayushpandey2026/Job_Portal",
+              live: "https://jobwallah.vercel.app/",
+            },
+
             {
               title: "E-Commerce Platform",
               desc: "Developed a full-stack MERN e-commerce platform using Next.js with server-side rendering (SSR) for improved SEO and performance. Integrated JWT authentication, protected routes, and scalable state management with Redux Toolkit. Ensured code reliability with unit tests in Jest and React Testing Library, achieving 80% test coverage.",
