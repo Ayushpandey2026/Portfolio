@@ -67,7 +67,7 @@ export default function Portfolio() {
       {/* Header */}
       <div className="flex justify-between items-center p-6 relative z-20">
         <a
-      href="https://drive.google.com/uc?export=download&id=1xSxeIle_FEPNQ7VBFwyz4Fi6xD2y_sKp"
+      href="https://drive.google.com/file/d/14sBy2E_-8dFlNk_jsTc2TNUX7dOi4Cgd/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded text-white hover:scale-105 transition"
@@ -116,13 +116,15 @@ export default function Portfolio() {
   </div>
 
   {/* Left: Photo */}
-  <div className="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-indigo-500 mb-6 md:mb-0 md:mr-12">
-    <img
-      src={import.meta.env.VITE_PHOTO_PATH}
-      alt="Ayush Pandey"
-      className="w-full h-full object-cover"
-    />
-  </div>
+ <div className="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-indigo-500 mb-6 md:mb-0 md:mr-12 bg-gray-200"> 
+  {/* Added 'bg-gray-200' so the circle is visible instantly */}
+  <img
+    src={import.meta.env.VITE_PHOTO_PATH}
+    alt="Ayush Pandey"
+    className="w-full h-full object-cover"
+    fetchpriority="high"
+  />
+</div>
 
   {/* Right: About + Dynamic */}
   <div className="max-w-xl">
@@ -471,7 +473,7 @@ live: "https://wellness-session-platform-eta.vercel.app/login"
       >
         <h2 className="text-3xl font-bold mb-4">Coding Profiles</h2>
         <p className="flex justify-center items-center gap-2">
-          <FaCode className="text-xl" /> 350+ LeetCode DSA:{" "}
+          <FaCode className="text-xl" /> 500+ LeetCode DSA:{" "}
           <a
             href="https://leetcode.com/u/Ayushpandey23/"
             target="_blank"
