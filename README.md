@@ -8,7 +8,7 @@ This is my personal portfolio built with **React.js**, **Tailwind CSS**, **Frame
 
 ## 📌 Live Demo
 
-🔗 [https://ayushpp.netlify.app/](https://ayushpp.netlify.app/)
+🔗 [https://ayushpp.netlify.app/](https://ayushpp.vercel.app/)
 
 ---
 
@@ -38,7 +38,7 @@ This is my personal portfolio built with **React.js**, **Tailwind CSS**, **Frame
 ---
 
 ## 📂 Folder Structure
-
+<pre>
 portfolio/
 ├── public/
 │ └── AyushPandey_Resume.pdf
@@ -54,7 +54,7 @@ portfolio/
 ├── postcss.config.js
 ├── index.html
 └── README.md
-
+</pre>
 
 
 ---
@@ -63,8 +63,8 @@ portfolio/
 
 1️⃣ **Clone the repository**
 ```bash
-git clone https://github.com/Ayushpandey2026/portfolio-site.git
-cd portfolio-site
+git clone https://github.com/Ayushpandey2026/Portfolio.git
+cd portfolio
 
 npm install
 
@@ -73,10 +73,7 @@ npm run dev
 npm run build
 
 
-📬 Contact
+# 📬 Contact
 📧 ayushpandey02003@gmail.com
 
-🔗 LinkedIn
-
-🐙 GitHub
 
