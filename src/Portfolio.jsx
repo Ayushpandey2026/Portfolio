@@ -119,7 +119,7 @@ export default function Portfolio() {
  <div className="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-indigo-500 mb-6 md:mb-0 md:mr-12 bg-gray-200"> 
   {/* Added 'bg-gray-200' so the circle is visible instantly */}
 <img
-    src={import.meta.env.VITE_PHOTO_PATH }
+    src="https://res.cloudinary.com/dpnveeorc/image/upload/v1773231400/crop_best_photo_jdxio0.jpg"
     alt="Ayush Pandey"
     className="w-full h-full object-cover"
     fetchpriority="high"
@@ -141,7 +141,7 @@ export default function Portfolio() {
         words={[
           "I build fast, modern & responsive web apps.",
           "React | JavaScript | Node.js",
-          "350+ DSA on LeetCode",
+          "500+ DSA on LeetCode",
         ]}
         loop
         cursor
