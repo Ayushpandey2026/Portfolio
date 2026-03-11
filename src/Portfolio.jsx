@@ -4,8 +4,8 @@ import { Typewriter } from "react-simple-typewriter";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
-const emailAddress = import.meta.env.VITE_EMAIL;
+const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "919569658349";
+const emailAddress = import.meta.env.VITE_EMAIL || "ayushpandey02003@gmail.com";
 
 import {
   FaGithub,
@@ -118,8 +118,8 @@ export default function Portfolio() {
   {/* Left: Photo */}
  <div className="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-indigo-500 mb-6 md:mb-0 md:mr-12 bg-gray-200"> 
   {/* Added 'bg-gray-200' so the circle is visible instantly */}
-  <img
-    src={import.meta.env.VITE_PHOTO_PATH}
+<img
+    src={import.meta.env.VITE_PHOTO_PATH }
     alt="Ayush Pandey"
     className="w-full h-full object-cover"
     fetchpriority="high"
