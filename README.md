@@ -1,6 +1,6 @@
 # 🚀 Ayush Pandey | Portfolio Website
 
-Hey! I'm **Ayush Pandey**, a passionate **Frontend Developer** who loves building modern, responsive, and fast web applications.
+Hey! I'm **Ayush Pandey**, a passionate **FullStack Developer** who loves building modern, responsive, and fast web applications.
 
 This is my personal portfolio built with **React.js**, **Tailwind CSS**, **Framer Motion**, and **Vite** to showcase my projects, skills, and contact details.
 
