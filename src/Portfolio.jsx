@@ -67,7 +67,7 @@ export default function Portfolio() {
       {/* Header */}
       <div className="flex justify-between items-center p-6 relative z-20">
         <a
-      href="https://drive.google.com/file/d/13y8C6vIcEnJO6if1cvxOn2P4o7qvOQOV/view?usp=sharing"
+      href="https://drive.google.com/file/d/1WiX3ooIkHM7O49IkrkYVHrP7sF-CSjwG/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded text-white hover:scale-105 transition"
@@ -157,7 +157,7 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
     </p>
     <div className="flex gap-4">
       <a
-        href="https://drive.google.com/file/d/13y8C6vIcEnJO6if1cvxOn2P4o7qvOQOV/view?usp=sharing"
+        href="https://drive.google.com/file/d/1WiX3ooIkHM7O49IkrkYVHrP7sF-CSjwG/view?usp=sharing"
         download
         className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded text-white hover:scale-105 transition"
       >
@@ -254,6 +254,94 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
           </div>
         </div>
 
+
+        {/* PROJECTS */}
+      <motion.section
+        className="max-w-5xl mx-auto p-8 relative z-10"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {[
+            {
+              title: "JobWallah",
+              desc: "A modern job portal built to simplify the hiring process by connecting talent with opportunities. The platform enables quick job discovery, easy applications, and efficient recruitment management for employers.It includes features such as job posting, job search, application management, and user authentication, providing an efficient recruitment workflow.",
+              img: "https://static.vecteezy.com/system/resources/previews/010/821/730/original/search-job-find-vacancy-employment-go-to-career-people-seek-opportunity-for-vacancy-or-work-position-search-new-work-in-internet-illustration-vector.jpg",
+              github: "https://github.com/Ayushpandey2026/Job_Portal",
+              live: "https://jobwallah.vercel.app/",
+            },
+            {
+  "title": "ShopLink - Kirana Dead Stock Exchange",
+  "desc": "AI-powered inventory sharing platform solving ₹50k Cr dead stock problem for 10M+ Indian kirana stores. Shops share excess stock photos → AI detects expiry → Nearby shops get instant offers with UPI payment. Live with 5+ Prayagraj kiranas, 50+ transactions processed. Built with AI API, GroqAPI , Node.js & Razorpay for real-world B2B commerce.",
+  "img": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  "github": "https://github.com/Ayushpandey2026/ShopLink-Kirana-Exchange",
+  "live": "https://shoplink.vercel.app/" 
+},
+
+            {
+              title: "E-Commerce Platform",
+              desc: "Developed a full-stack MERN e-commerce platform using Next.js with server-side rendering (SSR) for improved SEO and performance. Integrated JWT authentication, protected routes, and scalable state management with Redux Toolkit. Ensured code reliability with unit tests in Jest and React Testing Library, achieving 80% test coverage.",
+              img: "https://media.istockphoto.com/id/2207271217/photo/optimization-of-procurement-or-purchasing-product-order-for-online-shopping-and-service.webp?a=1&b=1&s=612x612&w=0&k=20&c=P_y-L-YouyqzohO1ni94GlzDouI_VO11JVfX4zMW42c=",
+              github: "https://github.com/Ayushpandey2026/E_Shop",
+              live: "https://everbuy.vercel.app/",
+            },
+
+
+            {
+              title: "EarthlyEncounter",
+              desc: "Built a REST API-powered, responsive country information SPA using React.js, Axios, and CSS. Integrated Framer Motion to deliver smooth UI animations, achieving a 90+ Lighthouse score and reducing page load times by 30%",
+              img: "images/countryexplore_images.jpg",
+              github: "https://github.com/Ayushpandey2026/CountryExplorer",
+              live: "https://earthlyencounters.netlify.app/",
+            },
+            {
+title: "Wellness Session Platform",
+desc: "Built a secure wellness platform with JWT Auth, Protected Routes, session browsing, and draft publishing features. Implemented auto-save for drafts with debounced updates, improving reliability and preventing content loss.",
+img: "https://img.freepik.com/free-photo/wellness-diet-plan-healthy-living-icon_53876-121317.jpg?semt=ais_hybrid&w=740&q=80",
+github: "https://github.com/Ayushpandey2026/Wellness_Session_Platform",
+live: "https://wellness-session-platform-eta.vercel.app/login"
+},
+
+            {
+              title: "Dynamic JSON Schema Builder",
+              desc: "Dynamic JSON Schema Builder is an advanced, interactive React application that enables users to visually create complex JSON schemas with nested fields in real-time. The project demonstrates my strong skills in ReactJS, Ant Design, React Hook Form, and modern development tools like Vite.",
+              img: "images/json_image.jpg",
+              github: "https://github.com/Ayushpandey2026/json_schema_builder",
+              live: "https://jsoncrafts.netlify.app/",
+            },
+          ].map((p, i) => (
+            <motion.div
+              key={i}
+              className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition"
+              whileInView={{ y: [50, 0], opacity: [0, 1] }}
+            >
+              <img
+                src={p.img}
+                alt={p.title}
+                className="w-full h-48 object-cover hover:scale-105 transition"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+                <p className="mb-4 text-gray-300">{p.desc}</p>
+                <div className="flex gap-4">
+                  <a href={p.github} target="_blank" rel="noreferrer">
+                    <FaGithub /> GitHub
+                  </a>
+                  {p.live && (
+                    <a href={p.live} target="_blank" rel="noreferrer">
+                      <FaExternalLinkAlt /> Live
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
         {/* Certifications Timeline */}
         <div className="mb-12">
           <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
@@ -325,83 +413,7 @@ From pixel-perfect UI to efficient backend logic, I aim for clean code and great
         </div>
       </motion.section>
 
-      {/* PROJECTS */}
-      <motion.section
-        className="max-w-5xl mx-auto p-8 relative z-10"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
-              title: "JobWallah",
-              desc: "A modern job portal built to simplify the hiring process by connecting talent with opportunities. The platform enables quick job discovery, easy applications, and efficient recruitment management for employers.It includes features such as job posting, job search, application management, and user authentication, providing an efficient recruitment workflow.",
-              img: "https://static.vecteezy.com/system/resources/previews/010/821/730/original/search-job-find-vacancy-employment-go-to-career-people-seek-opportunity-for-vacancy-or-work-position-search-new-work-in-internet-illustration-vector.jpg",
-              github: "https://github.com/Ayushpandey2026/Job_Portal",
-              live: "https://jobwallah.vercel.app/",
-            },
-
-            {
-              title: "E-Commerce Platform",
-              desc: "Developed a full-stack MERN e-commerce platform using Next.js with server-side rendering (SSR) for improved SEO and performance. Integrated JWT authentication, protected routes, and scalable state management with Redux Toolkit. Ensured code reliability with unit tests in Jest and React Testing Library, achieving 80% test coverage.",
-              img: "https://media.istockphoto.com/id/2207271217/photo/optimization-of-procurement-or-purchasing-product-order-for-online-shopping-and-service.webp?a=1&b=1&s=612x612&w=0&k=20&c=P_y-L-YouyqzohO1ni94GlzDouI_VO11JVfX4zMW42c=",
-              github: "https://github.com/Ayushpandey2026/E_Shop",
-              live: "https://everbuy.netlify.app/",
-            },
-            {
-              title: "EarthlyEncounter",
-              desc: "Built a REST API-powered, responsive country information SPA using React.js, Axios, and CSS. Integrated Framer Motion to deliver smooth UI animations, achieving a 90+ Lighthouse score and reducing page load times by 30%",
-              img: "images/countryexplore_images.jpg",
-              github: "https://github.com/Ayushpandey2026/CountryExplorer",
-              live: "https://earthlyencounters.netlify.app/",
-            },
-            {
-title: "Wellness Session Platform",
-desc: "Built a secure wellness platform with JWT Auth, Protected Routes, session browsing, and draft publishing features. Implemented auto-save for drafts with debounced updates, improving reliability and preventing content loss.",
-img: "https://img.freepik.com/free-photo/wellness-diet-plan-healthy-living-icon_53876-121317.jpg?semt=ais_hybrid&w=740&q=80",
-github: "https://github.com/Ayushpandey2026/Wellness_Session_Platform",
-live: "https://wellness-session-platform-eta.vercel.app/login"
-},
-
-            {
-              title: "Dynamic JSON Schema Builder",
-              desc: "Dynamic JSON Schema Builder is an advanced, interactive React application that enables users to visually create complex JSON schemas with nested fields in real-time. The project demonstrates my strong skills in ReactJS, Ant Design, React Hook Form, and modern development tools like Vite.",
-              img: "images/json_image.jpg",
-              github: "https://github.com/Ayushpandey2026/json_schema_builder",
-              live: "https://jsoncrafts.netlify.app/",
-            },
-          ].map((p, i) => (
-            <motion.div
-              key={i}
-              className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition"
-              whileInView={{ y: [50, 0], opacity: [0, 1] }}
-            >
-              <img
-                src={p.img}
-                alt={p.title}
-                className="w-full h-48 object-cover hover:scale-105 transition"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                <p className="mb-4 text-gray-300">{p.desc}</p>
-                <div className="flex gap-4">
-                  <a href={p.github} target="_blank" rel="noreferrer">
-                    <FaGithub /> GitHub
-                  </a>
-                  {p.live && (
-                    <a href={p.live} target="_blank" rel="noreferrer">
-                      <FaExternalLinkAlt /> Live
-                    </a>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+      
 
       {/* CONTACT */}
       <motion.section
